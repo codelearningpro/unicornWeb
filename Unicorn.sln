@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicorn.WebAPI", "Unicorn.WebAPI\Unicorn.WebAPI.csproj", "{243414ED-6A6B-40F2-83DB-9BC0E7498AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicorn.Domain", "Unicorn.Domain\Unicorn.Domain.csproj", "{B10C96B4-DC43-42F2-874C-40EEC9EEA8F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unicorn.WebLibrary", "Unicorn.WebLibrary\Unicorn.WebLibrary.csproj", "{3520E6C2-E380-4420-863C-A87A86425E2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{243414ED-6A6B-40F2-83DB-9BC0E7498AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{243414ED-6A6B-40F2-83DB-9BC0E7498AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{243414ED-6A6B-40F2-83DB-9BC0E7498AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{243414ED-6A6B-40F2-83DB-9BC0E7498AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B10C96B4-DC43-42F2-874C-40EEC9EEA8F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B10C96B4-DC43-42F2-874C-40EEC9EEA8F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B10C96B4-DC43-42F2-874C-40EEC9EEA8F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B10C96B4-DC43-42F2-874C-40EEC9EEA8F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3520E6C2-E380-4420-863C-A87A86425E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3520E6C2-E380-4420-863C-A87A86425E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3520E6C2-E380-4420-863C-A87A86425E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3520E6C2-E380-4420-863C-A87A86425E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

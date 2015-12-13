@@ -1,0 +1,5 @@
+C:\SWS\Unicorn\Unicorn.WebLibrary\bin\Release\Unicorn.WebLibrary.dll
+C:\SWS\Unicorn\Unicorn.WebLibrary\bin\Release\Unicorn.WebLibrary.pdb
+C:\SWS\Unicorn\Unicorn.WebLibrary\obj\Release\Unicorn.WebLibrary.csprojResolveAssemblyReference.cache
+C:\SWS\Unicorn\Unicorn.WebLibrary\obj\Release\Unicorn.WebLibrary.dll
+C:\SWS\Unicorn\Unicorn.WebLibrary\obj\Release\Unicorn.WebLibrary.pdb

@@ -1,0 +1,4 @@
+C:\SWS\Unicorn\Unicorn.WebLibrary\bin\Debug\Unicorn.WebLibrary.dll
+C:\SWS\Unicorn\Unicorn.WebLibrary\bin\Debug\Unicorn.WebLibrary.pdb
+C:\SWS\Unicorn\Unicorn.WebLibrary\obj\Debug\Unicorn.WebLibrary.dll
+C:\SWS\Unicorn\Unicorn.WebLibrary\obj\Debug\Unicorn.WebLibrary.pdb
