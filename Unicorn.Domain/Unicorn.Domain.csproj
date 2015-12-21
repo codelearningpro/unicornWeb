@@ -55,6 +55,8 @@
     <Compile Include="Entities\Customer.cs" />
     <Compile Include="Entities\CustomerSignIn.cs" />
     <Compile Include="Entities\Enum.cs" />
+    <Compile Include="Helpers\ErrorMessageHelper.cs" />
+    <Compile Include="Helpers\MessageHelper.cs" />
     <Compile Include="Interfaces\IApplicationDbContext.cs" />
     <Compile Include="Interfaces\IAuditable.cs" />
     <Compile Include="Interfaces\ICustomerRepository.cs" />

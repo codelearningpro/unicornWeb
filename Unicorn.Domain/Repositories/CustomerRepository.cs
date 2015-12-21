@@ -24,7 +24,7 @@ namespace Unicorn.Domain.Repositories
         /// <returns></returns>
         public Customer CreateCustomer(Customer customer)
         {
-            using (TransactionScope transactionScope = new TransactionScope(TransactionScopeOption.Required))
+           // using (TransactionScope transactionScope = new TransactionScope(TransactionScopeOption.Required))
             {
                 ctx.Customer.Add(customer);
                 ctx.SaveChanges();
@@ -32,14 +32,11 @@ namespace Unicorn.Domain.Repositories
                 foreach (CustomerSignIn customerSignIn in customer.SignIns)
                 {
                     customerSignIn.CustomerID = customer.ID;
-                    customerSignIn.StartDate = DateTime.Now;
-                    customerSignIn.ConfirmDate = DateTime.Now;
-                    customerSignIn.Sequence = 1;
                     ctx.CustomerSignIn.Add(customerSignIn);
-
                     ctx.SaveChanges();
                 }
 
+             
 
                 return customer;
             }
@@ -97,17 +94,26 @@ namespace Unicorn.Domain.Repositories
 
             customer.SignIns = new List<CustomerSignIn>();
 
+            DateTime currentTime = DateTime.Now;
+            Guid guid = System.Guid.NewGuid();
+
             CustomerSignIn emailSignIn = new CustomerSignIn();
             emailSignIn.SignInName_hash = email;
             emailSignIn.SignInPassword_hash = password;
+            emailSignIn.StartDate = currentTime;
+            emailSignIn.Token = guid;
             emailSignIn.SignInTypeID = (int)ConfigSignInType.Email;
+            emailSignIn.Sequence = 1;
+
 
 
             CustomerSignIn phoneSignIn = new CustomerSignIn();
             phoneSignIn.SignInName_hash = phone;
             phoneSignIn.SignInPassword_hash = password;
-            phoneSignIn.SignInTypeID =  (int) ConfigSignInType.Phone;
-
+            phoneSignIn.StartDate = currentTime;
+            phoneSignIn.Token = guid;
+            phoneSignIn.SignInTypeID = (int)ConfigSignInType.Phone;
+            phoneSignIn.Sequence = 2;
 
             customer.SignIns.Add(emailSignIn);
             customer.SignIns.Add(phoneSignIn);

@@ -15,9 +15,8 @@ namespace Unicorn.Domain.Entities
         public int SignInTypeID { get; set; }
         public string SignInName_hash { get; set; }
         public string SignInPassword_hash { get; set; }
-        [NotMapped]
-        public DateTime? StartDate { get; set; }
-        [NotMapped]
+        public DateTime StartDate { get; set; }
+        public Guid Token { get; set; }
         public DateTime? ConfirmDate { get; set; }
         public string Status { get; set; }
         public int Sequence { get; set; }

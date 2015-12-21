@@ -7,3 +7,4 @@ C:\SWS\Unicorn\Unicorn.Domain\bin\Release\EntityFramework.xml
 C:\SWS\Unicorn\Unicorn.Domain\bin\Release\EntityFramework.SqlServer.xml
 C:\SWS\Unicorn\Unicorn.Domain\obj\Release\Unicorn.Domain.dll
 C:\SWS\Unicorn\Unicorn.Domain\obj\Release\Unicorn.Domain.pdb
+C:\SWS\Unicorn\Unicorn.Domain\obj\Release\Unicorn.Domain.csprojResolveAssemblyReference.cache

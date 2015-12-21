@@ -6,6 +6,7 @@ using Unicorn.Domain.Concrete;
 using Unicorn.Domain.Interfaces;
 using Unicorn.Domain.Entities;
 using Unicorn.Domain.Repositories;
+using Unicorn.Domain.Helpers;
 
 namespace Unicorn.Domain.Repositories
 {
@@ -73,6 +74,18 @@ namespace Unicorn.Domain.Repositories
         }
 
 
+        public CustomerSignIn GetCustomerSignIn(ConfigSignInType signInType, Guid token)
+        {
+            return ctx.CustomerSignIn.Where(x => x.SignInTypeID == (int)signInType && x.Token == token).FirstOrDefault();
+        }
+
+
+        public CustomerSignIn ActivateSignIn(CustomerSignIn customerSignIn)
+        {
+            customerSignIn.ConfirmDate = DateTime.Now;
+            ctx.SaveChanges();
+            return customerSignIn;
+        }
     }
 }
 

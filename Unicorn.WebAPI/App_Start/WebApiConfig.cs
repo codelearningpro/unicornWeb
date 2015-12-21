@@ -37,6 +37,13 @@ namespace Unicorn.WebAPI
                 routeTemplate: "api/{controller}/{action}/{firstname}/{lastname}/{email}/{phone}/{password}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Routes.MapHttpRoute(
+              name: "ActivateApi",
+              routeTemplate: "api/{controller}/{action}/{id}/{token}",
+              defaults: new { id = RouteParameter.Optional }
+          );
+
         }
     }
 }
