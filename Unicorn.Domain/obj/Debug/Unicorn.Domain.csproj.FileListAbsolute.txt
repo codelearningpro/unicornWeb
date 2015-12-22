@@ -15,6 +15,5 @@ C:\savewithsprout\unicornWeb\Unicorn.Domain\bin\Debug\EntityFramework.dll
 C:\savewithsprout\unicornWeb\Unicorn.Domain\bin\Debug\EntityFramework.SqlServer.dll
 C:\savewithsprout\unicornWeb\Unicorn.Domain\bin\Debug\EntityFramework.xml
 C:\savewithsprout\unicornWeb\Unicorn.Domain\bin\Debug\EntityFramework.SqlServer.xml
-C:\savewithsprout\unicornWeb\Unicorn.Domain\obj\Debug\Unicorn.Domain.csprojResolveAssemblyReference.cache
 C:\savewithsprout\unicornWeb\Unicorn.Domain\obj\Debug\Unicorn.Domain.dll
 C:\savewithsprout\unicornWeb\Unicorn.Domain\obj\Debug\Unicorn.Domain.pdb

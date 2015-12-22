@@ -16,8 +16,8 @@ namespace Unicorn.WebLibrary.Helpers
             CustomerSignIn customerSign = customer.SignIns.First<CustomerSignIn>(x => x.SignInTypeID == 1);
             string to = customerSign.SignInName_hash;
             string subject = "Save with Sprout - Account activation.";
-            string body = string.Format("Hi! You are one step away from saving money. " + Environment.NewLine + Environment.NewLine 
-                + "Please click the following link to activate your account. {0}/{1}/{2}", WebConfig.ACTIVATE_ACCOUNT_URL, customerSign.SignInTypeID, customerSign.Token);
+            string body = string.Format("Hi " + customer.FirstName + " " + customer.LastName +"!, you are one step away from saving money. " + Environment.NewLine + Environment.NewLine 
+                + "Please click the following link to activate your account. " + Environment.NewLine + Environment.NewLine + "{0}/{1}/{2}", WebConfig.ACTIVATE_ACCOUNT_URL, customerSign.SignInTypeID, customerSign.Token);
 
             SendEmail(to, subject, body);
         }

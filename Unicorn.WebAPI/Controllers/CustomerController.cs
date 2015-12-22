@@ -14,6 +14,7 @@ namespace Unicorn.WebAPI.Controllers
 {
     public class CustomerController : ApiController
     {
+        
         // GET: api/customer
         public IEnumerable<string> Get()
         {
@@ -23,26 +24,29 @@ namespace Unicorn.WebAPI.Controllers
             return new string[] { "Coming", "Soon", "To", "Save", "Money", "And", "Grow" };
         }
 
+        public IHttpActionResult CreateResult(bool success, string message)
+        {
+            return Json(new { success =  success, message = message});
+        }
+
 
         [HttpPost, ActionName("SignIn")]
-        public string SignIn(int id, string signinname, string password)
+        public IHttpActionResult SignIn(int id, string signinname, string password)
         {
             CustomerSignInRepository customerSignInRespository = new CustomerSignInRepository(WebConfig.SystemUserID);
             CustomerSignIn customerSignIn = customerSignInRespository.GetCustomerSignIn(ConfigSignInType.Email, signinname, password);
 
             if (customerSignIn == null)
-                return ErrorMessageHelper.INVALID_SIGIN;
+                return CreateResult(false, ErrorMessageHelper.INVALID_SIGIN); 
 
             if (!customerSignIn.ConfirmDate.HasValue)
-                return ErrorMessageHelper.ACCOUNT_NOT_ACTIVE;
+                return CreateResult(false, ErrorMessageHelper.ACCOUNT_NOT_ACTIVE);
 
-            return MessageHelper.SUCCESS + customerSignIn.CustomerID.ToString().Trim() + "|" + customerSignIn.SignInName_hash + "|" + customerSignIn.SignInPassword_hash;
-
-            //sample: return id.ToString().Trim() + siginname + "|" + signinpassword;
+            return CreateResult(true, MessageHelper.SUCCESS + customerSignIn.CustomerID.ToString().Trim() + "|" + customerSignIn.SignInName_hash + "|" + customerSignIn.SignInPassword_hash);
         }
 
         [HttpPost, ActionName("CreateCustomer")]
-        public string CreateCustomer(string firstname, string lastname, string email, string phone, string password)
+        public IHttpActionResult CreateCustomer(string firstname, string lastname, string email, string phone, string password)
         {
             using (CustomerRepository customerRespository = new CustomerRepository(WebConfig.SystemUserID))
             { 
@@ -50,11 +54,11 @@ namespace Unicorn.WebAPI.Controllers
                 Customer customer = customerRespository.CreateCustomer(firstname, lastname, email, phone, password);
 
                 if (customer == null)
-                    return ErrorMessageHelper.INVALID_SIGIN;
+                    return CreateResult(false, ErrorMessageHelper.INVALID_SIGIN);
 
                 EmailHelper.SendCustomerActivationEmail(customer);
 
-                return MessageHelper.SUCCESS + customer.ID.ToString().Trim() + "|" + customer.FirstName + "|" + lastname;
+                return CreateResult(true, MessageHelper.SUCCESS + customer.ID.ToString().Trim() + "|" + customer.FirstName + "|" + lastname);  
             }
             //sample: return firstname + "|" + lastname + "|" + email +  "|" + phone + "|" + password;
         }
@@ -64,24 +68,24 @@ namespace Unicorn.WebAPI.Controllers
         {
             CustomerSignInRepository customerSignInRespository = new CustomerSignInRepository(WebConfig.SystemUserID);
 
-            CustomerSignIn customerSignIn = customerSignInRespository.GetCustomerSignIn(ConfigSignInType.Email, new Guid(token));
+            List<CustomerSignIn> customerSignIns = customerSignInRespository.GetCustomerSignIn(ConfigSignInType.Email, new Guid(token));
 
-            if (customerSignIn == null)
+            if (customerSignIns == null)
                 return ErrorMessageHelper.INVALID_TOKEN;
-            else if (customerSignIn.ConfirmDate.HasValue)
+
+            else if (customerSignIns[0].ConfirmDate.HasValue)
                 return ErrorMessageHelper.ACCOUNT_ALREADY_ACTIVE;
 
 
-            customerSignIn = customerSignInRespository.ActivateSignIn(customerSignIn);
+            customerSignIns = customerSignInRespository.ActivateSignIn(customerSignIns);
 
-            if(customerSignIn==null)
+            if(customerSignIns==null)
             {
-                return ErrorMessageHelper.GENERAL_SIGNIN_FAILURE;
+                return ErrorMessageHelper.ACCOUNT_ALREADY_ACTIVE;
             }
 
             return MessageHelper.ACCOUNT_ACTIVATED;
-
-         
+                    
         
             //sample: return id.ToString().Trim() + siginname + "|" + signinpassword;
         }

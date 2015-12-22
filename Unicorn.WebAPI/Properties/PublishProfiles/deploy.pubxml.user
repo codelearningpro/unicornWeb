@@ -9,6 +9,24 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>c:\SWSDeploy</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="app-content/app.css">
+      <publishTime>12/20/2015 20:30:16</publishTime>
+    </File>
+    <File Include="app-services/authentication.service.js">
+      <publishTime>12/20/2015 19:55:17</publishTime>
+    </File>
+    <File Include="app-services/flash.service.js">
+      <publishTime>12/20/2015 14:26:43</publishTime>
+    </File>
+    <File Include="app-services/user.service.js">
+      <publishTime>12/20/2015 20:14:13</publishTime>
+    </File>
+    <File Include="app-services/user.service.local-storage.js">
+      <publishTime>12/20/2015 14:26:43</publishTime>
+    </File>
+    <File Include="app.js">
+      <publishTime>12/20/2015 20:01:15</publishTime>
+    </File>
     <File Include="Areas/HelpPage/HelpPage.css">
       <publishTime>12/12/2015 23:44:12</publishTime>
     </File>
@@ -199,13 +217,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2015 23:44:07</publishTime>
     </File>
     <File Include="bin/Unicorn.Domain.dll">
-      <publishTime>12/20/2015 09:44:38</publishTime>
+      <publishTime>12/20/2015 21:16:29</publishTime>
     </File>
     <File Include="bin/Unicorn.WebAPI.dll">
-      <publishTime>12/20/2015 09:44:51</publishTime>
+      <publishTime>12/20/2015 21:16:38</publishTime>
     </File>
     <File Include="bin/Unicorn.WebLibrary.dll">
-      <publishTime>12/20/2015 09:44:40</publishTime>
+      <publishTime>12/20/2015 21:16:30</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>12/12/2015 23:44:13</publishTime>
@@ -237,8 +255,29 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Global.asax">
       <publishTime>12/12/2015 23:43:46</publishTime>
     </File>
+    <File Include="home/home.controller.js">
+      <publishTime>12/20/2015 20:54:58</publishTime>
+    </File>
+    <File Include="home/home.view.html">
+      <publishTime>12/20/2015 20:54:43</publishTime>
+    </File>
+    <File Include="index.html">
+      <publishTime>12/20/2015 20:34:52</publishTime>
+    </File>
+    <File Include="login/login.controller.js">
+      <publishTime>12/20/2015 14:26:43</publishTime>
+    </File>
+    <File Include="login/login.view.html">
+      <publishTime>12/20/2015 14:26:43</publishTime>
+    </File>
     <File Include="packages.config">
       <publishTime>12/19/2015 09:49:26</publishTime>
+    </File>
+    <File Include="register/register.controller.js">
+      <publishTime>12/20/2015 20:10:52</publishTime>
+    </File>
+    <File Include="register/register.view.html">
+      <publishTime>12/20/2015 20:09:31</publishTime>
     </File>
     <File Include="Scripts/bootstrap.js">
       <publishTime>12/12/2015 23:43:53</publishTime>
@@ -277,7 +316,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2015 23:44:13</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>12/12/2015 23:44:13</publishTime>
+      <publishTime>12/20/2015 19:57:16</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
       <publishTime>12/12/2015 23:43:46</publishTime>
@@ -295,7 +334,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/12/2015 23:43:46</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/20/2015 09:44:57</publishTime>
+      <publishTime>12/20/2015 20:55:58</publishTime>
     </File>
   </ItemGroup>
 </Project>

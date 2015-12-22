@@ -74,17 +74,26 @@ namespace Unicorn.Domain.Repositories
         }
 
 
-        public CustomerSignIn GetCustomerSignIn(ConfigSignInType signInType, Guid token)
+        public List<CustomerSignIn> GetCustomerSignIn(ConfigSignInType signInType, Guid token)
         {
-            return ctx.CustomerSignIn.Where(x => x.SignInTypeID == (int)signInType && x.Token == token).FirstOrDefault();
+            return ctx.CustomerSignIn.Where(x => x.Token == token).ToList<CustomerSignIn>();
+
+            // return ctx.CustomerSignIn.Where(x => x.SignInTypeID == (int)signInType && x.Token == token).ToList<CustomerSignIn>();
         }
 
 
-        public CustomerSignIn ActivateSignIn(CustomerSignIn customerSignIn)
+        public List<CustomerSignIn> ActivateSignIn(List<CustomerSignIn> customerSignIns)
         {
-            customerSignIn.ConfirmDate = DateTime.Now;
+            DateTime currentDate = DateTime.Now;
+
+            foreach (CustomerSignIn customerSignIn in customerSignIns)
+            {
+                customerSignIn.ConfirmDate = currentDate;
+            }
+
+
             ctx.SaveChanges();
-            return customerSignIn;
+            return customerSignIns;
         }
     }
 }
