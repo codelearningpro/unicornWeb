@@ -221,12 +221,25 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app-content\app.css" />
+    <Content Include="app-services\authentication.service.js" />
+    <Content Include="app-services\flash.service.js" />
+    <Content Include="app-services\user.service.js" />
+    <Content Include="app-services\user.service.local-storage.js" />
+    <Content Include="app.js" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="home\home.controller.js" />
+    <Content Include="home\home.view.html" />
+    <Content Include="index.html" />
+    <Content Include="login\login.controller.js" />
+    <Content Include="login\login.view.html" />
+    <Content Include="register\register.controller.js" />
+    <Content Include="register\register.view.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
