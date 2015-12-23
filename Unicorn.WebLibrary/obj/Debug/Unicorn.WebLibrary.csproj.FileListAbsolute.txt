@@ -2,3 +2,8 @@ C:\SWS\Unicorn\Unicorn.WebLibrary\bin\Debug\Unicorn.WebLibrary.dll
 C:\SWS\Unicorn\Unicorn.WebLibrary\bin\Debug\Unicorn.WebLibrary.pdb
 C:\SWS\Unicorn\Unicorn.WebLibrary\obj\Debug\Unicorn.WebLibrary.dll
 C:\SWS\Unicorn\Unicorn.WebLibrary\obj\Debug\Unicorn.WebLibrary.pdb
+C:\Users\dhallap\Documents\GitHub\unicornWeb\Unicorn.WebLibrary\bin\Debug\Unicorn.WebLibrary.dll
+C:\Users\dhallap\Documents\GitHub\unicornWeb\Unicorn.WebLibrary\bin\Debug\Unicorn.WebLibrary.pdb
+C:\Users\dhallap\Documents\GitHub\unicornWeb\Unicorn.WebLibrary\obj\Debug\Unicorn.WebLibrary.csprojResolveAssemblyReference.cache
+C:\Users\dhallap\Documents\GitHub\unicornWeb\Unicorn.WebLibrary\obj\Debug\Unicorn.WebLibrary.dll
+C:\Users\dhallap\Documents\GitHub\unicornWeb\Unicorn.WebLibrary\obj\Debug\Unicorn.WebLibrary.pdb
